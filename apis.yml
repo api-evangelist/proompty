@@ -161,9 +161,6 @@ apis:
         url: openapi/proompty-openapi-original.yml
     aid: proompty:proompty
     score: 553
-    overlays:
-      - type: API Evangelist Ratings
-        url: overlays/proompty-openapi-api-evangelist-ratings.yml
 common:
   - type: Getting Started
     url: https://platform.openai.com/docs/quickstart
