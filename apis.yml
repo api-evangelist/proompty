@@ -159,7 +159,7 @@ apis:
       - type: Documentation
         url: https://app.proompty.com/docs/api
       - type: OpenAPI
-        url: properties/proompty-openapi-original.yml
+        url: openapiproompty-openapi-original.yml
     aid: proompty:proompty
     score: 553
     overlays:
