@@ -36,12 +36,12 @@ manipulate their data effectively.
 
 #### Tags:
 
- - Absence, Associated, Attributes, Avatars, Claims, Data, Detailed, Details, Emails, Endpoints, Errors, Essential, Events, Found, Includes, Indicating, Information, Me, Names, Obtain, Pertaining, Pertinent, Plans, Profiles, Proompty, Regarding, Roles, Sending, Specified, Status, Subscriptions, Systems, Types, URL, Users, About, Access, Accurate, Any, Appropriate, Case, Chats, Containing, Corresponding, Descriptions, Documents, Ensuring, Feedback, Format, JSON, Objects, Parameters, Receive, Relevant, Specific, Titles, Topic's, Topics, Body, Modify, Content, Creation, Dates, Designated, Document's, Metadata, Confirming, Messages, Send, Success, Across, Efficiently, Enables, Exists, Facilitating, Files, Manage, Platforms, Present, Resources, Seamless, Sharing, Topics,, Uploaded, Uploads, Prompts, Prompt's, Aspects, Changes, Communication, Confirmations, Executions, Handling, Items, Payload, Properties, Providing, Transparent, Capabilities, Effectively, Management, Permanently, Provides, Streamlined, Utilize, Accuracy, Allowing, Array, Between, Clarity, Comprehensive, Efficient, Facilitates, Interactions, Including, Inputs, Invalid, Issues, Methods, Offers, Organizations, Paths, Straightforward, Typically, Available, Allowed, Maximum, Numbers, Reached
+ -  Topics,  Documents,  Uploads,  Prompts,  Chat
 
 #### Properties
 
 - [Documentation](https://app.proompty.com/docs/api)
-- [OpenAPI](openapi/proompty-openapi-original.yml)
+- [OpenAPI](properties/proompty-openapi.yml)
 
 ## Common Properties
 
