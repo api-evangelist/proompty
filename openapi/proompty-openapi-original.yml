@@ -1,13 +1,14 @@
 openapi: 3.0.0
 info:
-  title: Proompty API
+  title: Proompty
   version: 1.1.0
-  description: >-
-    Proompty is an advanced **Retrieval Augmented Generation (RAG)** API
-    designed to empower users in seamlessly integrating their data and
-    harnessing the power of customized **Large Language Model (LLM)** prompts
-    for interactive communication. At its core, Proompty operates through a
-    series of interconnected functionalities that enable users to navigate and
+  description: |-
+
+    Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
+    to empower users in seamlessly integrating their data and harnessing the
+    power of customized Large Language Model (LLM) prompts for interactive
+    communication. At its core, Proompty operates through a series of
+    interconnected functionalities that enable users to navigate and
     manipulate their data effectively.
   termsOfService: https://proompty.com/terms-of-service
   contact:
@@ -26,6 +27,7 @@ paths:
   /me:
     get:
       tags:
+        - Me
         - User
       description: Retrieve user information
       summary: >-
@@ -55,6 +57,7 @@ paths:
     get:
       tags:
         - Topics
+        - Topic
       description: Get a topic by ID
       summary: >-
         Retrieve details about a specific topic in the Proompty API. By sending
@@ -91,6 +94,7 @@ paths:
     put:
       tags:
         - Topics
+        - Topic
       description: Update a topic by ID
       summary: >-
         Update the details of a specific topic in the Proompty API. By sending a
@@ -123,6 +127,8 @@ paths:
   /topics/{topicId}/documents/{documentId}:
     get:
       tags:
+        - Topics
+        - Topic
         - Documents
       description: Get a document by ID
       summary: >-
@@ -157,6 +163,8 @@ paths:
           description: Not found
     delete:
       tags:
+        - Topics
+        - Topic
         - Documents
       description: Delete a document by ID
       parameters:
@@ -194,7 +202,10 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Documents
+        - Uploads
       description: Upload a document to a topic
       summary: >-
         Upload a document to a specific topic. Users can send a POST request to
@@ -246,7 +257,11 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
+        - Prompt
+        - Chat
       description: >
         Chat with a Prompt AI with a message or a binary stream using
         content-type: application/octet-stream (see Request body dropdown)
@@ -336,7 +351,10 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
+        - Prompt
       description: Retrieves a Prompt
       summary: >-
         Retrieve details about a specific prompt within a designated topic in
@@ -373,7 +391,10 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
+        - Prompt
       description: Update a Prompt
       summary: >-
         Update a specific prompt within a designated topic. Users can send a PUT
@@ -418,7 +439,10 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
+        - Prompt
       description: Deletes a Prompt
       summary: >-
         Remove a specific prompt associated with a particular topic. To utilize
@@ -454,6 +478,8 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
       description: Retrieve all prompts for a topic
       summary: >-
@@ -489,6 +515,8 @@ paths:
             type: string
           required: true
       tags:
+        - Topics
+        - Topic
         - Prompts
       description: Create a prompt for a topic
       summary: >-
