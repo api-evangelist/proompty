@@ -8,8 +8,8 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Prompts
   - Artificial Intelligence
+  - Prompts
 url: >-
   https://raw.githubusercontent.com/api-evangelist/proompty/refs/heads/main/apis.yml
 created: '2024-06-06'
@@ -19,11 +19,11 @@ apis:
   - aid: proompty:proompty
     name: Proompty
     tags:
-      - Topics
-      - Documents
-      - Uploads
-      - Prompts
       - Chat
+      - Documents
+      - Prompts
+      - Topics
+      - Uploads
     baseURL: https://app.proompty.com/api/
     humanURL: https://app.proompty.com/docs/api
     properties:

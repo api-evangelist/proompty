@@ -21,6 +21,14 @@ servers:
 security:
   - APIKey: []
 tags:
+  - name: Chat
+  - name: Documents
+  - name: Me
+  - name: Prompt
+  - name: Prompts
+  - name: Topic
+  - name: Topics
+  - name: Uploads
   - name: User
     description: User related endpoints
 paths:
@@ -56,8 +64,8 @@ paths:
   /topics/{topicId}:
     get:
       tags:
-        - Topics
         - Topic
+        - Topics
       description: Get a topic by ID
       summary: >-
         Retrieve details about a specific topic in the Proompty API. By sending
@@ -93,8 +101,8 @@ paths:
           description: Not found
     put:
       tags:
-        - Topics
         - Topic
+        - Topics
       description: Update a topic by ID
       summary: >-
         Update the details of a specific topic in the Proompty API. By sending a
@@ -127,9 +135,9 @@ paths:
   /topics/{topicId}/documents/{documentId}:
     get:
       tags:
-        - Topics
-        - Topic
         - Documents
+        - Topic
+        - Topics
       description: Get a document by ID
       summary: >-
         Retrieve details about a specific document within a designated topic in
@@ -163,9 +171,9 @@ paths:
           description: Not found
     delete:
       tags:
-        - Topics
-        - Topic
         - Documents
+        - Topic
+        - Topics
       description: Delete a document by ID
       parameters:
         - in: path
@@ -202,9 +210,9 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
         - Documents
+        - Topic
+        - Topics
         - Uploads
       description: Upload a document to a topic
       summary: >-
@@ -257,11 +265,11 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
-        - Prompts
-        - Prompt
         - Chat
+        - Prompt
+        - Prompts
+        - Topic
+        - Topics
       description: >
         Chat with a Prompt AI with a message or a binary stream using
         content-type: application/octet-stream (see Request body dropdown)
@@ -351,10 +359,10 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
-        - Prompts
         - Prompt
+        - Prompts
+        - Topic
+        - Topics
       description: Retrieves a Prompt
       summary: >-
         Retrieve details about a specific prompt within a designated topic in
@@ -391,10 +399,10 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
-        - Prompts
         - Prompt
+        - Prompts
+        - Topic
+        - Topics
       description: Update a Prompt
       summary: >-
         Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt information. This enables users to modify aspects of the prompt such as its content, metadata, or any other relevant properties. Upon successful execution, the endpoint responds with the updated prompt object in JSON format, providing confirmation of the changes made. In case the specified prompt or topic is not found, the endpoint returns an appropriate error response (404 for prompt not found, 500 for other errors), ensuring transparent communication and accurate handling of requests.
@@ -429,10 +437,10 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
-        - Prompts
         - Prompt
+        - Prompts
+        - Topic
+        - Topics
       description: Deletes a Prompt
       summary: >-
         Remove a specific prompt associated with a particular topic. To utilize
@@ -468,9 +476,9 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
         - Prompts
+        - Topic
+        - Topics
       description: Retrieve all prompts for a topic
       summary: >-
         Retrieve a list of all prompts associated with a specific topic. Users
@@ -505,9 +513,9 @@ paths:
             type: string
           required: true
       tags:
-        - Topics
-        - Topic
         - Prompts
+        - Topic
+        - Topics
       description: Create a prompt for a topic
       summary: >-
         Create a new prompts within a specified topic. Users can send a POST
