@@ -31,13 +31,12 @@ apis:
         type: Documentation
       - url: properties/proompty-openapi.yml
         type: OpenAPI
-    description: |-
-      Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
-      to empower users in seamlessly integrating their data and harnessing the
-      power of customized Large Language Model (LLM) prompts for interactive
-      communication. At its core, Proompty operates through a series of
-      interconnected functionalities that enable users to navigate and
-      manipulate their data effectively.
+    description: >-
+      Proompty is an advanced Retrieval Augmented Generation (RAG) API designed to
+      empower users in seamlessly integrating their data and harnessing the power
+      of customized Large Language Model (LLM) prompts for interactive communication.
+      At its core, Proompty operates through a series of interconnected functionalities
+      that enable users to navigate and manipulate their data effectively.
 common:
   - url: https://app.proompty.com/docs/api
     type: GettingStarted
