@@ -1,33 +1,26 @@
 # Proompty (proompty)
-Proompty is a web-based platform that offers customizable prompts and exercises to inspire creativity and productivity. Users can access a wide range of prompts, from writing exercises to drawing challenges, designed to spark new ideas and break through mental blocks. Proompty also provides tools for organizing and tracking progress, allowing users to set goals and monitor their growth over time. Whether you're a writer, artist, or creator of any kind, Proompty is a valuable resource for finding inspiration and staying motivated in your creative pursuits.
+Proompty is a web-based platform that offers customizable prompts and exercises to inspire creativity and productivity. Users can access a wide range of prompts, from writing exercises to drawing challenges, designed to spark new ideas and break through mental blocks.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-search/ai/main/_apis/proompty/apis.md)
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/proompty/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Contract 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+- **Type:** Index
 
 ## Tags:
 
- - Prompts, Artificial Intelligence
+ - Artificial Intelligence, Prompts
 
 ## Timestamps
 
-- **Created:** 2024-06-06 
-- **Modified:** 2025-01-02 
+- **Created:** 2024-06-06
+- **Modified:** 2026-04-28
 
 ## APIs
 
 ### Proompty
 
-Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
-to empower users in seamlessly integrating their data and harnessing the
-power of customized Large Language Model (LLM) prompts for interactive
-communication. At its core, Proompty operates through a series of
-interconnected functionalities that enable users to navigate and
-manipulate their data effectively.
+Proompty is an advanced Retrieval Augmented Generation (RAG) API designed to empower users in seamlessly integrating their data and harnessing the power of customized Large Language Model (LLM) prompts for interactive communication. At its core, Proompty operates through a series of interconnected functionalities that enable users to navigate and manipulate their data effectively.
 
 **Human URL:** [https://app.proompty.com/docs/api](https://app.proompty.com/docs/api)
 
@@ -36,20 +29,19 @@ manipulate their data effectively.
 
 #### Tags:
 
- -  Topics,  Documents,  Uploads,  Prompts,  Chat
+ - Chat, Documents, Prompts, Topics, Uploads
 
 #### Properties
 
 - [Documentation](https://app.proompty.com/docs/api)
-- [OpenAPI](properties/proompty-openapi.yml)
+- [OpenAPI](openapi/proompty-openapi-original.yml)
 
 ## Common Properties
 
-- [Getting Started](https://platform.openai.com/docs/quickstart)
+- [Getting Started](https://app.proompty.com/docs/api)
 
 ## Maintainers
 
-**FN:** API Evangelist
+**FN:** Kin Lane
 
-**Email:** info@apievangelist.com
-
+**Email:** kin@apievangelist.com
