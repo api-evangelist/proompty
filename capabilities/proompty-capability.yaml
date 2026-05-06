@@ -1,0 +1,764 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Proompty
+  description: Proompty is an advanced Retrieval Augmented Generation (RAG) API designed to empower users in seamlessly integrating
+    their data and harnessing the power of customized Large Language Model (LLM) prompts for interactive communication. At
+    its core, Proompty operates through a series of interconnected functionalities that enable users to navigate and manipulate
+    their data effectively.
+  tags:
+  - Proompty
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: proompty
+    baseUri: https://app.proompty.com/api
+    description: Proompty HTTP API.
+    resources:
+    - name: me
+      path: /me
+      operations:
+      - name: get-me
+        method: GET
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid
+      path: /topics/{topicId}
+      operations:
+      - name: get-topics-topicid
+        method: GET
+        description: Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint
+          with the corresponding topicId parameter, users can access information such as the topic's title, description, and
+          any associated documen
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: include
+          in: query
+          type: string
+          description: 'Include additional data in the response. Possible values: documents, chats.'
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put-topics-topicid
+        method: PUT
+        description: Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint
+          with the corresponding topicId parameter and the updated topic object in the request body, users can modify the
+          topic's title, description
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid-documents-documentid
+      path: /topics/{topicId}/documents/{documentId}
+      operations:
+      - name: get-topics-topicid-documents-documentid
+        method: GET
+        description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending
+          a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+          such as the document'
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: documentId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete-topics-topicid-documents-documentid
+        method: DELETE
+        description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+          to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+          The API responds
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: documentId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid-documents-upload
+      path: /topics/{topicId}/documents/upload
+      operations:
+      - name: post-topics-topicid-documents-upload
+        method: POST
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid-prompts-promptid-chat
+      path: /topics/{topicId}/prompts/{promptId}/chat
+      operations:
+      - name: post-topics-topicid-prompts-promptid-chat
+        method: POST
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: promptId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid-prompts-promptid
+      path: /topics/{topicId}/prompts/{promptId}
+      operations:
+      - name: get-topics-topicid-prompts-promptid
+        method: GET
+        description: Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a
+          GET request to this endpoint with the corresponding topicId and promptId parameters, users can access information
+          such as the prompt's cont
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: promptId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: put-topics-topicid-prompts-promptid
+        method: PUT
+        description: Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint
+          with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt
+          information. This ena
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: promptId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete-topics-topicid-prompts-promptid
+        method: DELETE
+        description: Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE
+          request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently
+          deleted fro
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: promptId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics-topicid-prompts
+      path: /topics/{topicId}/prompts
+      operations:
+      - name: get-topics-topicid-prompts
+        method: GET
+        description: Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this
+          endpoint with the relevant topicId parameter to access comprehensive information about each prompt within the specified
+          topic. The API res
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-topics-topicid-prompts
+        method: POST
+        description: Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including
+          the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This
+          payload typically inc
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: topics
+      path: /topics
+      operations:
+      - name: get-topics
+        method: GET
+        description: Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access
+          a list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing
+          the relevant detai
+        inputParameters:
+        - name: include
+          in: query
+          type: string
+          description: 'Include additional data in the response. Possible values: chats.'
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-topics
+        method: POST
+        description: Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic
+          object in the request body, users can create a new topic with the specified attributes. The API responds with the
+          newly created topic obje
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: proompty-rest
+    description: REST adapter for Proompty.
+    resources:
+    - path: /me
+      name: get-me
+      operations:
+      - method: GET
+        name: get-me
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        call: proompty.get-me
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}
+      name: get-topics-topicid
+      operations:
+      - method: GET
+        name: get-topics-topicid
+        description: Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint
+          with the corresponding topicId parameter, users can access information such as the topic's title, description, and
+          any associated documen
+        call: proompty.get-topics-topicid
+        with:
+          topicId: rest.topicId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}
+      name: put-topics-topicid
+      operations:
+      - method: PUT
+        name: put-topics-topicid
+        description: Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint
+          with the corresponding topicId parameter and the updated topic object in the request body, users can modify the
+          topic's title, description
+        call: proompty.put-topics-topicid
+        with:
+          topicId: rest.topicId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/documents/{documentId}
+      name: get-topics-topicid-documents-documentid
+      operations:
+      - method: GET
+        name: get-topics-topicid-documents-documentid
+        description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending
+          a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+          such as the document'
+        call: proompty.get-topics-topicid-documents-documentid
+        with:
+          topicId: rest.topicId
+          documentId: rest.documentId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/documents/{documentId}
+      name: delete-topics-topicid-documents-documentid
+      operations:
+      - method: DELETE
+        name: delete-topics-topicid-documents-documentid
+        description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+          to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+          The API responds
+        call: proompty.delete-topics-topicid-documents-documentid
+        with:
+          topicId: rest.topicId
+          documentId: rest.documentId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/documents/upload
+      name: post-topics-topicid-documents-upload
+      operations:
+      - method: POST
+        name: post-topics-topicid-documents-upload
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        call: proompty.post-topics-topicid-documents-upload
+        with:
+          topicId: rest.topicId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts/{promptId}/chat
+      name: post-topics-topicid-prompts-promptid-chat
+      operations:
+      - method: POST
+        name: post-topics-topicid-prompts-promptid-chat
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        call: proompty.post-topics-topicid-prompts-promptid-chat
+        with:
+          topicId: rest.topicId
+          promptId: rest.promptId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts/{promptId}
+      name: get-topics-topicid-prompts-promptid
+      operations:
+      - method: GET
+        name: get-topics-topicid-prompts-promptid
+        description: Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a
+          GET request to this endpoint with the corresponding topicId and promptId parameters, users can access information
+          such as the prompt's cont
+        call: proompty.get-topics-topicid-prompts-promptid
+        with:
+          topicId: rest.topicId
+          promptId: rest.promptId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts/{promptId}
+      name: put-topics-topicid-prompts-promptid
+      operations:
+      - method: PUT
+        name: put-topics-topicid-prompts-promptid
+        description: Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint
+          with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt
+          information. This ena
+        call: proompty.put-topics-topicid-prompts-promptid
+        with:
+          topicId: rest.topicId
+          promptId: rest.promptId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts/{promptId}
+      name: delete-topics-topicid-prompts-promptid
+      operations:
+      - method: DELETE
+        name: delete-topics-topicid-prompts-promptid
+        description: Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE
+          request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently
+          deleted fro
+        call: proompty.delete-topics-topicid-prompts-promptid
+        with:
+          topicId: rest.topicId
+          promptId: rest.promptId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts
+      name: get-topics-topicid-prompts
+      operations:
+      - method: GET
+        name: get-topics-topicid-prompts
+        description: Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this
+          endpoint with the relevant topicId parameter to access comprehensive information about each prompt within the specified
+          topic. The API res
+        call: proompty.get-topics-topicid-prompts
+        with:
+          topicId: rest.topicId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics/{topicId}/prompts
+      name: post-topics-topicid-prompts
+      operations:
+      - method: POST
+        name: post-topics-topicid-prompts
+        description: Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including
+          the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This
+          payload typically inc
+        call: proompty.post-topics-topicid-prompts
+        with:
+          topicId: rest.topicId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics
+      name: get-topics
+      operations:
+      - method: GET
+        name: get-topics
+        description: Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access
+          a list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing
+          the relevant detai
+        call: proompty.get-topics
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /topics
+      name: post-topics
+      operations:
+      - method: POST
+        name: post-topics
+        description: Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic
+          object in the request body, users can create a new topic with the specified attributes. The API responds with the
+          newly created topic obje
+        call: proompty.post-topics
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: proompty-mcp
+    transport: http
+    description: MCP adapter for Proompty for AI agent use.
+    tools:
+    - name: get-me
+      description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users
+        can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+        such as email, f
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-me
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-topics-topicid
+      description: Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint
+        with the corresponding topicId parameter, users can access information such as the topic's title, description, and
+        any associated documen
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-topics-topicid
+      with:
+        topicId: tools.topicId
+        include: tools.include
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: include
+        type: string
+        description: 'Include additional data in the response. Possible values: documents, chats.'
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: put-topics-topicid
+      description: Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint with
+        the corresponding topicId parameter and the updated topic object in the request body, users can modify the topic's
+        title, description
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: proompty.put-topics-topicid
+      with:
+        topicId: tools.topicId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-topics-topicid-documents-documentid
+      description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending a
+        GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+        such as the document'
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-topics-topicid-documents-documentid
+      with:
+        topicId: tools.topicId
+        documentId: tools.documentId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: documentId
+        type: string
+        description: documentId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-topics-topicid-documents-documentid
+      description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+        to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+        The API responds
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: proompty.delete-topics-topicid-documents-documentid
+      with:
+        topicId: tools.topicId
+        documentId: tools.documentId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: documentId
+        type: string
+        description: documentId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-topics-topicid-documents-upload
+      description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+        topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+        object containing th
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty.post-topics-topicid-documents-upload
+      with:
+        topicId: tools.topicId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-topics-topicid-prompts-promptid-chat
+      description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users
+        can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+        such as email, f
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty.post-topics-topicid-prompts-promptid-chat
+      with:
+        topicId: tools.topicId
+        promptId: tools.promptId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: promptId
+        type: string
+        description: promptId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-topics-topicid-prompts-promptid
+      description: Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a GET
+        request to this endpoint with the corresponding topicId and promptId parameters, users can access information such
+        as the prompt's cont
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-topics-topicid-prompts-promptid
+      with:
+        topicId: tools.topicId
+        promptId: tools.promptId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: promptId
+        type: string
+        description: promptId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: put-topics-topicid-prompts-promptid
+      description: Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint
+        with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt information.
+        This ena
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: proompty.put-topics-topicid-prompts-promptid
+      with:
+        topicId: tools.topicId
+        promptId: tools.promptId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: promptId
+        type: string
+        description: promptId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-topics-topicid-prompts-promptid
+      description: Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE
+        request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently
+        deleted fro
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: proompty.delete-topics-topicid-prompts-promptid
+      with:
+        topicId: tools.topicId
+        promptId: tools.promptId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      - name: promptId
+        type: string
+        description: promptId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-topics-topicid-prompts
+      description: Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this endpoint
+        with the relevant topicId parameter to access comprehensive information about each prompt within the specified topic.
+        The API res
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-topics-topicid-prompts
+      with:
+        topicId: tools.topicId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-topics-topicid-prompts
+      description: Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including
+        the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This
+        payload typically inc
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty.post-topics-topicid-prompts
+      with:
+        topicId: tools.topicId
+      inputParameters:
+      - name: topicId
+        type: string
+        description: topicId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-topics
+      description: Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access a
+        list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing
+        the relevant detai
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty.get-topics
+      with:
+        include: tools.include
+      inputParameters:
+      - name: include
+        type: string
+        description: 'Include additional data in the response. Possible values: chats.'
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-topics
+      description: Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic object
+        in the request body, users can create a new topic with the specified attributes. The API responds with the newly created
+        topic obje
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty.post-topics
+      outputParameters:
+      - type: object
+        mapping: $.
