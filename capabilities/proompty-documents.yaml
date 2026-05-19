@@ -1,0 +1,190 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Proompty — Documents
+  description: 'Proompty — Documents. 3 operations. Lead operation: Upload a document to a specific topic. Users can send
+    a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the
+    specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata.
+    This endpoint enables users to efficiently upload and'
+  tags:
+  - Proompty
+  - Documents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PROOMPTY_API_KEY: PROOMPTY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: proompty-documents
+    baseUri: https://app.proompty.com/api
+    description: Proompty — Documents business capability. Self-contained, no shared references.
+    resources:
+    - name: topics-topicId-documents-upload
+      path: /topics/{topicId}/documents/upload
+      operations:
+      - name: post
+        method: POST
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: topics-topicId-documents-documentId
+      path: /topics/{topicId}/documents/{documentId}
+      operations:
+      - name: get
+        method: GET
+        description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending
+          a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+          such as the document'
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: documentId
+          in: path
+          type: string
+          required: true
+      - name: delete
+        method: DELETE
+        description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+          to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+          The API responds
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: documentId
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: proompty-documents-rest
+    port: 8080
+    description: REST adapter for Proompty — Documents. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/topics/{topicid}/documents/upload
+      name: topics-topicid-documents-upload
+      description: REST surface for topics-topicId-documents-upload.
+      operations:
+      - method: POST
+        name: post
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        call: proompty-documents.post
+        with:
+          topicId: rest.topicId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/topics/{topicid}/documents/{documentid}
+      name: topics-topicid-documents-documentid
+      description: REST surface for topics-topicId-documents-documentId.
+      operations:
+      - method: GET
+        name: get
+        description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending
+          a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+          such as the document'
+        call: proompty-documents.get
+        with:
+          topicId: rest.topicId
+          documentId: rest.documentId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: delete
+        description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+          to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+          The API responds
+        call: proompty-documents.delete
+        with:
+          topicId: rest.topicId
+          documentId: rest.documentId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: proompty-documents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Proompty — Documents. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: upload-document-specific-topic-users
+      description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+        topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+        object containing th
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty-documents.post
+      with:
+        topicId: tools.topicId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: retrieve-details-about-specific-document
+      description: Retrieve details about a specific document within a designated topic in the Proompty API. By sending a
+        GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information
+        such as the document'
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: proompty-documents.get
+      with:
+        topicId: tools.topicId
+        documentId: tools.documentId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-specific-document-within-designated
+      description: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request
+        to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic.
+        The API responds
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: proompty-documents.delete
+      with:
+        topicId: tools.topicId
+        documentId: tools.documentId
+      outputParameters:
+      - type: object
+        mapping: $.

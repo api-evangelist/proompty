@@ -1,0 +1,96 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Proompty — Chat
+  description: 'Proompty — Chat. 1 operations. Lead operation: Retrieves user information within the Proompty API system.
+    By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims.
+    This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally,
+    the response includes claims regarding the user'''
+  tags:
+  - Proompty
+  - Chat
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PROOMPTY_API_KEY: PROOMPTY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: proompty-chat
+    baseUri: https://app.proompty.com/api
+    description: Proompty — Chat business capability. Self-contained, no shared references.
+    resources:
+    - name: topics-topicId-prompts-promptId-chat
+      path: /topics/{topicId}/prompts/{promptId}/chat
+      operations:
+      - name: post
+        method: POST
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: promptId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+  exposes:
+  - type: rest
+    namespace: proompty-chat-rest
+    port: 8080
+    description: REST adapter for Proompty — Chat. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/topics/{topicid}/prompts/{promptid}/chat
+      name: topics-topicid-prompts-promptid-chat
+      description: REST surface for topics-topicId-prompts-promptId-chat.
+      operations:
+      - method: POST
+        name: post
+        description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint,
+          users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+          such as email, f
+        call: proompty-chat.post
+        with:
+          topicId: rest.topicId
+          promptId: rest.promptId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: proompty-chat-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Proompty — Chat. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: retrieves-user-information-within-proompty
+      description: Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users
+        can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes
+        such as email, f
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: proompty-chat.post
+      with:
+        topicId: tools.topicId
+        promptId: tools.promptId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

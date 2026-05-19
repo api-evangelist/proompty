@@ -1,0 +1,91 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Proompty — Uploads
+  description: 'Proompty — Uploads. 1 operations. Lead operation: Upload a document to a specific topic. Users can send a
+    POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the
+    specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata.
+    This endpoint enables users to efficiently upload and m'
+  tags:
+  - Proompty
+  - Uploads
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    PROOMPTY_API_KEY: PROOMPTY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: proompty-uploads
+    baseUri: https://app.proompty.com/api
+    description: Proompty — Uploads business capability. Self-contained, no shared references.
+    resources:
+    - name: topics-topicId-documents-upload
+      path: /topics/{topicId}/documents/upload
+      operations:
+      - name: post
+        method: POST
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: topicId
+          in: path
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+  exposes:
+  - type: rest
+    namespace: proompty-uploads-rest
+    port: 8080
+    description: REST adapter for Proompty — Uploads. One Spectral-compliant resource per consumed operation, prefixed with
+      /v1.
+    resources:
+    - path: /v1/topics/{topicid}/documents/upload
+      name: topics-topicid-documents-upload
+      description: REST surface for topics-topicId-documents-upload.
+      operations:
+      - method: POST
+        name: post
+        description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+          topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+          object containing th
+        call: proompty-uploads.post
+        with:
+          topicId: rest.topicId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: proompty-uploads-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Proompty — Uploads. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: upload-document-specific-topic-users
+      description: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant
+        topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON
+        object containing th
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: proompty-uploads.post
+      with:
+        topicId: tools.topicId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
