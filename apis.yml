@@ -28,23 +28,23 @@ apis:
     type: Documentation
   - url: openapi/proompty-openapi-original.yml
     type: OpenAPI
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-chat.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-documents.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-me.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-prompt.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-prompts.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-topic.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-topics.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-uploads.yaml
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/proompty-user.yaml
   description: Proompty is an advanced Retrieval Augmented Generation (RAG) API designed to empower users in seamlessly integrating
     their data and harnessing the power of customized Large Language Model (LLM) prompts for interactive communication. At
