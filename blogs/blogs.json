@@ -1,0 +1,7 @@
+{
+  "repo": "proompty",
+  "feeds": [],
+  "fetched": "2026-07-04T17:18:18Z",
+  "post_count": 1,
+  "note": "blogs/ already populated from a prior pull; no Blog-type source registered in apis.yml and no new discovery performed this run"
+}
