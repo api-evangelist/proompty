@@ -51,6 +51,8 @@ apis:
     its core, Proompty operates through a series of interconnected functionalities that enable users to navigate and manipulate
     their data effectively.
 common:
+- type: AgenticAccess
+  url: agentic-access/proompty-agentic-access.yml
 - type: DomainSecurity
   url: security/proompty-domain-security.yml
 - url: https://app.proompty.com/docs/api
