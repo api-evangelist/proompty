@@ -1,0 +1,67 @@
+openapi: 3.0.0
+info:
+  title: Proompty Chat Uploads API
+  version: 1.1.0
+  description: '
+
+    Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
+
+    to empower users in seamlessly integrating their data and harnessing the
+
+    power of customized Large Language Model (LLM) prompts for interactive
+
+    communication. At its core, Proompty operates through a series of
+
+    interconnected functionalities that enable users to navigate and
+
+    manipulate their data effectively.'
+  termsOfService: https://proompty.com/terms-of-service
+  contact:
+    email: developers@proompty.com
+servers:
+- url: https://app.proompty.com/api
+security:
+- APIKey: []
+tags:
+- name: Uploads
+paths:
+  /topics/{topicId}/documents/upload:
+    post:
+      parameters:
+      - in: path
+        name: topicId
+        schema:
+          type: string
+        required: true
+      tags:
+      - Uploads
+      description: Upload a document to a topic
+      summary: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: Document uploaded
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  document:
+                    $ref: '#/components/schemas/Document'
+        '404':
+          description: Topic not found
+        '409':
+          description: Document already exists
+        '500':
+          description: Error uploading document
+externalDocs:
+  url: /api.yaml
+  description: OpenAPI Specification

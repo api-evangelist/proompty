@@ -1,0 +1,111 @@
+openapi: 3.0.0
+info:
+  title: Proompty Chat API
+  version: 1.1.0
+  description: '
+
+    Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
+
+    to empower users in seamlessly integrating their data and harnessing the
+
+    power of customized Large Language Model (LLM) prompts for interactive
+
+    communication. At its core, Proompty operates through a series of
+
+    interconnected functionalities that enable users to navigate and
+
+    manipulate their data effectively.'
+  termsOfService: https://proompty.com/terms-of-service
+  contact:
+    email: developers@proompty.com
+servers:
+- url: https://app.proompty.com/api
+security:
+- APIKey: []
+tags:
+- name: Chat
+paths:
+  /topics/{topicId}/prompts/{promptId}/chat:
+    post:
+      parameters:
+      - in: path
+        name: topicId
+        schema:
+          type: string
+        required: true
+      - in: path
+        name: promptId
+        schema:
+          type: string
+        required: true
+      tags:
+      - Chat
+      description: 'Chat with a Prompt AI with a message or a binary stream using content-type: application/octet-stream (see Request body dropdown)
+
+        '
+      summary: 'Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user''s subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.
+
+        '
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                message:
+                  type: string
+                  description: The message to send to the prompt AI.
+                  example: What is your favorite color?
+                model:
+                  type: string
+                  description: The model to use for the response. Default is gpt4.
+                  example: gpt3 | gpt4 | gpt4o
+                temperature:
+                  type: string
+                  description: The temperature to use for the response. Default is 0.15.
+                  example: '0.15'
+                maxTokens:
+                  type: string
+                  description: The maximum number of tokens to generate for the response. Default is 500.
+                  example: '500'
+          application/octet-stream:
+            schema:
+              type: string
+              format: binary
+              description: The binary stream to be uploaded.
+      responses:
+        '200':
+          description: Prompt
+          content:
+            application/json:
+              schema:
+                properties:
+                  text:
+                    type: string
+                    description: The response from the prompt AIt.
+                    example: My favorite color is blue.
+                  model:
+                    type: string
+                    description: The model used to generate the response.
+                    example: gpt4
+                  sourceDocuments:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        metadata:
+                          type: object
+                          properties:
+                            documentId:
+                              type: string
+                            filename:
+                              type: string
+                            topicId:
+                              type: string
+        '404':
+          description: Prompt not found
+        '500':
+          description: Error getting prompt
+externalDocs:
+  url: /api.yaml
+  description: OpenAPI Specification
