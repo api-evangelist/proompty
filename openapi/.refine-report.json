@@ -1,0 +1,45 @@
+{
+  "provider": "proompty",
+  "sources": [
+    "proompty-chat-api-openapi.yml",
+    "proompty-documents-api-openapi.yml",
+    "proompty-me-api-openapi.yml",
+    "proompty-prompt-api-openapi.yml",
+    "proompty-prompts-api-openapi.yml",
+    "proompty-topic-api-openapi.yml",
+    "proompty-topics-api-openapi.yml",
+    "proompty-uploads-api-openapi.yml",
+    "proompty-user-api-openapi.yml"
+  ],
+  "outputs": [
+    "proompty-chat-api-openapi.yml",
+    "proompty-documents-api-openapi.yml",
+    "proompty-me-api-openapi.yml",
+    "proompty-prompt-api-openapi.yml",
+    "proompty-prompts-api-openapi.yml",
+    "proompty-topic-api-openapi.yml",
+    "proompty-topics-api-openapi.yml",
+    "proompty-uploads-api-openapi.yml",
+    "proompty-user-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [
+    "proompty-documents-api-openapi.yml: dangling $ref: #/components/schemas/Document",
+    "proompty-me-api-openapi.yml: dangling $ref: #/components/schemas/Claims",
+    "proompty-me-api-openapi.yml: dangling $ref: #/components/schemas/User",
+    "proompty-prompt-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
+    "proompty-prompts-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
+    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Document",
+    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
+    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Topic",
+    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Document",
+    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
+    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Topic",
+    "proompty-uploads-api-openapi.yml: dangling $ref: #/components/schemas/Document",
+    "proompty-user-api-openapi.yml: dangling $ref: #/components/schemas/Claims",
+    "proompty-user-api-openapi.yml: dangling $ref: #/components/schemas/User"
+  ],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
