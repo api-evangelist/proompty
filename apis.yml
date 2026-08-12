@@ -37,24 +37,6 @@ apis:
     url: openapi/proompty-chat-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-documents-api
   name: Proompty Documents API
   description: The Documents API from Proompty — 2 operation(s) for documents.
@@ -67,24 +49,6 @@ apis:
     url: openapi/proompty-documents-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-me-api
   name: Proompty Me API
   description: The Me API from Proompty — 1 operation(s) for me.
@@ -97,24 +61,6 @@ apis:
     url: openapi/proompty-me-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-prompt-api
   name: Proompty Prompt API
   description: The Prompt API from Proompty — 2 operation(s) for prompt.
@@ -127,24 +73,6 @@ apis:
     url: openapi/proompty-prompt-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-prompts-api
   name: Proompty Prompts API
   description: The Prompts API from Proompty — 3 operation(s) for prompts.
@@ -157,24 +85,6 @@ apis:
     url: openapi/proompty-prompts-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-topic-api
   name: Proompty Topic API
   description: The Topic API from Proompty — 6 operation(s) for topic.
@@ -187,24 +97,6 @@ apis:
     url: openapi/proompty-topic-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-topics-api
   name: Proompty Topics API
   description: The Topics API from Proompty — 7 operation(s) for topics.
@@ -217,24 +109,6 @@ apis:
     url: openapi/proompty-topics-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-uploads-api
   name: Proompty Uploads API
   description: The Uploads API from Proompty — 1 operation(s) for uploads.
@@ -247,24 +121,6 @@ apis:
     url: openapi/proompty-uploads-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 - aid: proompty:proompty-user-api
   name: Proompty User API
   description: User related endpoints
@@ -277,24 +133,6 @@ apis:
     url: openapi/proompty-user-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-chat.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-documents.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-me.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompt.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-prompts.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topic.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-topics.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-uploads.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/proompty-user.yaml
 common:
 - type: AgenticAccess
   url: agentic-access/proompty-agentic-access.yml
