@@ -1,0 +1,131 @@
+{
+  "item": [
+    {
+      "id": "01d069d7-3ba3-462b-960c-2aab76ad5748",
+      "name": "Me",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c7bbb1ca-cb6e-4475-89c4-c5234f3ccdfb",
+          "name": "Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user's subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.",
+          "request": {
+            "name": "Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user's subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.",
+            "description": {
+              "content": "Retrieve user information",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "me"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e7fb9eaf-ee8f-4f71-a3d5-503d61d9cbc0",
+              "name": "User info",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"claims\": {\n    \"value\": \"reference #/components/schemas/Claims not found in the OpenAPI spec\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7f21becb-49c5-4531-8a8b-4917f7c330ae",
+              "name": "User not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "me"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.proompty.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "4fa19be2-6336-4fb4-a5f1-d8ef51662793",
+    "name": "Proompty Chat Me API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\nProompty is an advanced Retrieval Augmented Generation (RAG) API designed\nto empower users in seamlessly integrating their data and harnessing the\npower of customized Large Language Model (LLM) prompts for interactive\ncommunication. At its core, Proompty operates through a series of\ninterconnected functionalities that enable users to navigate and\nmanipulate their data effectively.\n\nContact Support:\n Email: developers@proompty.com",
+      "type": "text/plain"
+    }
+  }
+}

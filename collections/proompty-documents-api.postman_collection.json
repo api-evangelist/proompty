@@ -1,0 +1,604 @@
+{
+  "item": [
+    {
+      "id": "16e9992b-5c6f-4139-82a0-fb20e22f5c3c",
+      "name": "Documents",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "96237b3b-d8b6-4843-be62-379dba24ea2e",
+          "name": "Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Get a document by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                ":documentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "documentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "300a2053-7c87-4b8e-87ee-a1850b995282",
+              "name": "Document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "729a6876-9d69-4330-a32c-b57f7d18bd5f",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "21755d0b-7bc0-41d8-af5a-29a2a95497e1",
+          "name": "Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Delete a document by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                ":documentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "documentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b35afd05-f776-484a-8ddf-b3c1a0bd4b9b",
+              "name": "ok",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3dd85874-914d-45d7-8e55-f9e0f41b8640",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a9d23c10-28a0-478b-a06e-df1fb8e77881",
+          "name": "Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.",
+          "request": {
+            "name": "Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.",
+            "description": {
+              "content": "Upload a document to a topic",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3e9d2e29-f99e-4922-b0a4-aff368cad984",
+              "name": "Document uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"document\": {\n    \"value\": \"reference #/components/schemas/Document not found in the OpenAPI spec\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5de0c46b-5aea-43c1-a65a-dd79eb8b86d5",
+              "name": "Topic not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "27b317bf-cb4b-4672-bda7-922831f0fcef",
+              "name": "Document already exists",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e499daa4-25fe-4c34-a206-982b32ebea02",
+              "name": "Error uploading document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.proompty.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "0f9bbf54-4477-4bd8-83fe-e61aa523b662",
+    "name": "Proompty Chat Documents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\nProompty is an advanced Retrieval Augmented Generation (RAG) API designed\nto empower users in seamlessly integrating their data and harnessing the\npower of customized Large Language Model (LLM) prompts for interactive\ncommunication. At its core, Proompty operates through a series of\ninterconnected functionalities that enable users to navigate and\nmanipulate their data effectively.\n\nContact Support:\n Email: developers@proompty.com",
+      "type": "text/plain"
+    }
+  }
+}

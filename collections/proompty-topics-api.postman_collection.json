@@ -1,0 +1,2435 @@
+{
+  "item": [
+    {
+      "id": "ee3e65ed-7a83-424d-bb1c-df2ff9aa8ecb",
+      "name": "Topics",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "73cd4343-1a6b-429a-a2ea-29201f3dff90",
+          "name": "Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId parameter, users can access information such as the topic's title, description, and any associated documents or chats. The API responds with the topic object in JSON format, containing the relevant details. In case the requested topic is not found, appropriate error responses are returned (404 for topic not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId parameter, users can access information such as the topic's title, description, and any associated documents or chats. The API responds with the topic object in JSON format, containing the relevant details. In case the requested topic is not found, appropriate error responses are returned (404 for topic not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Get a topic by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>",
+                  "description": "Include additional data in the response. Possible values: documents, chats."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e3229fb2-36be-4c4e-86da-712646634998",
+              "name": "Topic",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9383623f-7802-41ce-83a4-c9cf377ec513",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0f85413-f560-4b4d-b0af-bc7e6fac6148",
+          "name": "Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint with the corresponding topicId parameter and the updated topic object in the request body, users can modify the topic's title, description, or other attributes. The API responds with the updated topic object in JSON format, containing the new details. In case the requested topic is not found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint with the corresponding topicId parameter and the updated topic object in the request body, users can modify the topic's title, description, or other attributes. The API responds with the updated topic object in JSON format, containing the new details. In case the requested topic is not found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Update a topic by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5045c935-bd17-419b-8530-3662687520c9",
+              "name": "Topic",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "96f40070-41df-4df2-a09c-293946172383",
+          "name": "Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Get a document by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                ":documentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "documentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f2f93318-387b-4176-b127-bec70941fd02",
+              "name": "Document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a381fa6f-eb64-4137-ab2d-83c567d16c21",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a4de641e-0607-489f-a15e-a37490ff3cc0",
+          "name": "Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Delete a document by ID",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                ":documentId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "documentId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ecc7428d-51de-4881-aae2-bedc45398ada",
+              "name": "ok",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "556e6b2e-e3c6-4338-9f46-0b6c7231f02f",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    ":documentId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "documentId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9cef514c-0e35-4f06-8170-d187a6a633d6",
+          "name": "Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.",
+          "request": {
+            "name": "Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.",
+            "description": {
+              "content": "Upload a document to a topic",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "documents",
+                "upload"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "type": "file",
+                  "description": ""
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "292904a3-fe45-46a1-967e-35b772c94e7f",
+              "name": "Document uploaded",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"document\": {\n    \"value\": \"reference #/components/schemas/Document not found in the OpenAPI spec\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3070d149-13fc-45b0-9c9d-dcc88d919e97",
+              "name": "Topic not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3ab174d0-b090-4e65-8453-deff6e591faa",
+              "name": "Document already exists",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Conflict",
+              "code": 409,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1bbc329a-1e0c-4b97-804b-cf130cab652f",
+              "name": "Error uploading document",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "documents",
+                    "upload"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<binary>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "686d989b-1370-40a5-ac01-63ce92710b2d",
+          "name": "Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user's subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.\n",
+          "request": {
+            "name": "Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user's subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.\n",
+            "description": {
+              "content": "Chat with a Prompt AI with a message or a binary stream using content-type: application/octet-stream (see Request body dropdown)\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts",
+                ":promptId",
+                "chat"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "promptId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"message\": \"<string>\",\n  \"model\": \"<string>\",\n  \"temperature\": \"<string>\",\n  \"maxTokens\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "efc5706e-d52e-46d7-9f1b-3ff0f19af882",
+              "name": "Prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId",
+                    "chat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"message\": \"What is your favorite color?\",\n  \"model\": \"gpt3 | gpt4 | gpt4o\",\n  \"temperature\": \"0.15\",\n  \"maxTokens\": \"500\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"text\": \"My favorite color is blue.\",\n  \"model\": \"gpt4\",\n  \"sourceDocuments\": [\n    {\n      \"metadata\": {\n        \"documentId\": \"string\",\n        \"filename\": \"string\",\n        \"topicId\": \"string\"\n      }\n    },\n    {\n      \"metadata\": {\n        \"documentId\": \"string\",\n        \"filename\": \"string\",\n        \"topicId\": \"string\"\n      }\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "08b853ca-7a32-4ed6-80e7-5056813b37f1",
+              "name": "Prompt not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId",
+                    "chat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"message\": \"What is your favorite color?\",\n  \"model\": \"gpt3 | gpt4 | gpt4o\",\n  \"temperature\": \"0.15\",\n  \"maxTokens\": \"500\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bb33369b-6251-473c-af0f-20f7232966fa",
+              "name": "Error getting prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId",
+                    "chat"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"message\": \"What is your favorite color?\",\n  \"model\": \"gpt3 | gpt4 | gpt4o\",\n  \"temperature\": \"0.15\",\n  \"maxTokens\": \"500\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e85d9994-c0c2-40f3-bc53-5a8b17d1f283",
+          "name": "Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and promptId parameters, users can access information such as the prompt's content, creation date, and any associated metadata. The API responds with the prompt object in JSON format, containing the relevant details. In case the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and promptId parameters, users can access information such as the prompt's content, creation date, and any associated metadata. The API responds with the prompt object in JSON format, containing the relevant details. In case the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Retrieves a Prompt",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts",
+                ":promptId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "promptId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8da2f2f-4ddb-4404-8d07-72859b8fbb75",
+              "name": "Prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4b7a0b89-bd77-443d-80ea-4b8049326904",
+              "name": "Prompt not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "25e02377-42ac-4df6-9a9b-a23ae0c858c7",
+              "name": "Error getting prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b3265ea1-7531-4531-94bd-814000673d08",
+          "name": "Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt information. This enables users to modify aspects of the prompt such as its content, metadata, or any other relevant properties. Upon successful execution, the endpoint responds with the updated prompt object in JSON format, providing confirmation of the changes made. In case the specified prompt or topic is not found, the endpoint returns an appropriate error response (404 for prompt not found, 500 for other errors), ensuring transparent communication and accurate handling of requests.",
+          "request": {
+            "name": "Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt information. This enables users to modify aspects of the prompt such as its content, metadata, or any other relevant properties. Upon successful execution, the endpoint responds with the updated prompt object in JSON format, providing confirmation of the changes made. In case the specified prompt or topic is not found, the endpoint returns an appropriate error response (404 for prompt not found, 500 for other errors), ensuring transparent communication and accurate handling of requests.",
+            "description": {
+              "content": "Update a Prompt",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts",
+                ":promptId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "promptId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "78b7515f-2de4-410d-8db0-52f7bae5470e",
+              "name": "Prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b0b3aefc-fbc4-4838-934a-1b573b2af33d",
+              "name": "Prompt not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "528fac45-3001-475b-9f46-cf9af1ccf8a0",
+              "name": "Error getting prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e9e5ed18-8f49-47b1-a182-dda44423f95b",
+          "name": "Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently deleted from the system. The API responds with a confirmation message indicating the successful deletion of the prompt. In the event that the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors). This endpoint provides users with the capability to manage prompts effectively within their topics, ensuring streamlined content management within the Proompty platform.",
+          "request": {
+            "name": "Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently deleted from the system. The API responds with a confirmation message indicating the successful deletion of the prompt. In the event that the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors). This endpoint provides users with the capability to manage prompts effectively within their topics, ensuring streamlined content management within the Proompty platform.",
+            "description": {
+              "content": "Deletes a Prompt",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts",
+                ":promptId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "promptId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cf37726b-4a0c-4d51-bf15-19c6a48e9425",
+              "name": "Confirmation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Prompt deleted\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "33e18241-eea3-4ed7-9b7e-9d33d11296d1",
+              "name": "Prompt not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c0ecca49-c8ed-4e73-8cdd-c909a634e8f7",
+              "name": "Error getting prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts",
+                    ":promptId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "promptId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "55dd11b9-bf0d-4b0e-ae92-a8989537f84e",
+          "name": "Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this endpoint with the relevant topicId parameter to access comprehensive information about each prompt within the specified topic. The API responds with an array of prompt objects in JSON format, containing details such as prompt content, creation dates, and any relevant metadata. This endpoint facilitates efficient management and retrieval of prompts within topics, allowing users to access and utilize prompts effectively in their interactions with the Proompty platform. In case the requested topic is not found, the endpoint returns an appropriate error response (404), ensuring clarity and accuracy in communication between users and the API.",
+          "request": {
+            "name": "Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this endpoint with the relevant topicId parameter to access comprehensive information about each prompt within the specified topic. The API responds with an array of prompt objects in JSON format, containing details such as prompt content, creation dates, and any relevant metadata. This endpoint facilitates efficient management and retrieval of prompts within topics, allowing users to access and utilize prompts effectively in their interactions with the Proompty platform. In case the requested topic is not found, the endpoint returns an appropriate error response (404), ensuring clarity and accuracy in communication between users and the API.",
+            "description": {
+              "content": "Retrieve all prompts for a topic",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d0f80b8-e8ba-4796-96af-fab42d96869f",
+              "name": "Prompts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"value\": \"reference #/components/schemas/Prompt not found in the OpenAPI spec\"\n  },\n  {\n    \"value\": \"reference #/components/schemas/Prompt not found in the OpenAPI spec\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aa243bed-8dbb-4248-9b0c-ac29924d1f84",
+              "name": "Topic not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "98cea134-dc4b-4288-a694-0a47d4a9fa4b",
+              "name": "Error getting prompts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bdf4a257-5506-4b9b-a693-e384cba4cb93",
+          "name": "Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This payload typically includes the prompt content, along with any relevant metadata. Upon successful execution, the API responds with the newly created prompt object in JSON format, confirming its addition to the specified topic. If there are any issues with the request, such as invalid input data or the specified topic not being found, the endpoint returns an appropriate error response (400 for bad request, 404 for topic not found), ensuring users receive accurate feedback regarding the status of their request. This endpoint offers users a straightforward method for adding prompts to topics, facilitating the efficient management and organization of content within the Proompty platform.",
+          "request": {
+            "name": "Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This payload typically includes the prompt content, along with any relevant metadata. Upon successful execution, the API responds with the newly created prompt object in JSON format, confirming its addition to the specified topic. If there are any issues with the request, such as invalid input data or the specified topic not being found, the endpoint returns an appropriate error response (400 for bad request, 404 for topic not found), ensuring users receive accurate feedback regarding the status of their request. This endpoint offers users a straightforward method for adding prompts to topics, facilitating the efficient management and organization of content within the Proompty platform.",
+            "description": {
+              "content": "Create a prompt for a topic",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics",
+                ":topicId",
+                "prompts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "topicId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f7379eb1-61f7-443a-a429-a8a643de8934",
+              "name": "Prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "49e358a1-f7ad-49e3-997c-4f4e20b8db57",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ef524a3f-cf69-4110-8ca9-bb5b629ab8da",
+              "name": "Topic not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "eceec8ff-7682-46f4-b26a-8fd8203d634b",
+              "name": "Error creating prompt",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics",
+                    ":topicId",
+                    "prompts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "topicId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "01d3a6b8-1b57-4070-a05e-cd6af4431de5",
+          "name": "Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access a list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing the relevant details. In case no topics are found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access a list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing the relevant details. In case no topics are found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Get all topics",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include",
+                  "value": "<string>",
+                  "description": "Include additional data in the response. Possible values: chats."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de629054-7c28-44f6-aeb8-a36cf18a3441",
+              "name": "Topic[]",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"value\": \"reference #/components/schemas/Topic not found in the OpenAPI spec\"\n  },\n  {\n    \"value\": \"reference #/components/schemas/Topic not found in the OpenAPI spec\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5390fd61-2e80-4f4a-bdf4-a0ae9674704d",
+              "name": "Not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8d5ab0ea-43b5-4b95-8ed6-592e649703ef",
+          "name": "Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic object in the request body, users can create a new topic with the specified attributes. The API responds with the newly created topic object in JSON format, containing the relevant details. In case the maximum number of topics allowed on the user's plan is reached, an appropriate error response is returned (400), ensuring users receive accurate feedback regarding the status of their request.",
+          "request": {
+            "name": "Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic object in the request body, users can create a new topic with the specified attributes. The API responds with the newly created topic object in JSON format, containing the relevant details. In case the maximum number of topics allowed on the user's plan is reached, an appropriate error response is returned (400), ensuring users receive accurate feedback regarding the status of their request.",
+            "description": {
+              "content": "Create a topic",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "topics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d3bd003c-e25d-43eb-af85-1aaa7c4a6c5e",
+              "name": "Topic",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "34474ade-365e-49bf-bb4e-66370b14cf3a",
+              "name": "Maximum topics reached",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ff1e0ad4-9f57-4bca-b456-7e0369cfaf00",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "topics"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.proompty.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "84b043b1-40b2-4daf-8f2e-c56da8f87cf3",
+    "name": "Proompty Chat Topics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\nProompty is an advanced Retrieval Augmented Generation (RAG) API designed\nto empower users in seamlessly integrating their data and harnessing the\npower of customized Large Language Model (LLM) prompts for interactive\ncommunication. At its core, Proompty operates through a series of\ninterconnected functionalities that enable users to navigate and\nmanipulate their data effectively.\n\nContact Support:\n Email: developers@proompty.com",
+      "type": "text/plain"
+    }
+  }
+}

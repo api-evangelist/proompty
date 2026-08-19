@@ -1,0 +1,312 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Proompty Chat Topics API",
+    "version": "1.1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Topics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve details about a specific topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId parameter, users can access information such as the topic's title, description, and any associated documents or chats. The API responds with the topic object in JSON format, containing the relevant details. In case the requested topic is not found, appropriate error responses are returned (404 for topic not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.proompty.com/api/topics/:topicId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Include additional data in the response. Possible values: documents, chats."
+              }
+            ]
+          },
+          "docs": "Get a topic by ID"
+        },
+        {
+          "info": {
+            "name": "Update the details of a specific topic in the Proompty API. By sending a PUT request to this endpoint with the corresponding topicId parameter and the updated topic object in the request body, users can modify the topic's title, description, or other attributes. The API responds with the updated topic object in JSON format, containing the new details. In case the requested topic is not found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.proompty.com/api/topics/:topicId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a topic by ID"
+        },
+        {
+          "info": {
+            "name": "Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.proompty.com/api/topics/:topicId/documents/:documentId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "documentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a document by ID"
+        },
+        {
+          "info": {
+            "name": "Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.proompty.com/api/topics/:topicId/documents/:documentId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "documentId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a document by ID"
+        },
+        {
+          "info": {
+            "name": "Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.proompty.com/api/topics/:topicId/documents/upload",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "file",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Upload a document to a topic"
+        },
+        {
+          "info": {
+            "name": "Retrieves user information within the Proompty API system. By sending a GET request to this endpoint, users can obtain detailed data pertaining to their profile and associated claims. This includes essential user attributes such as email, full name, avatar URL, subscription plan, and role. Additionally, the response includes claims regarding the user's subscription status, role type, and other pertinent details. In the event that the requested user is not found, a 404 error response is returned, indicating the absence of the specified user within the system.\n",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts/:promptId/chat",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "promptId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Chat with a Prompt AI with a message or a binary stream using content-type: application/octet-stream (see Request body dropdown)\n"
+        },
+        {
+          "info": {
+            "name": "Retrieve details about a specific prompt within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and promptId parameters, users can access information such as the prompt's content, creation date, and any associated metadata. The API responds with the prompt object in JSON format, containing the relevant details. In case the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts/:promptId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "promptId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieves a Prompt"
+        },
+        {
+          "info": {
+            "name": "Proompty Update a specific prompt within a designated topic. Users can send a PUT request to this endpoint with the corresponding topicId and promptId parameters, along with a JSON payload containing the updated prompt information. This enables users to modify aspects of the prompt such as its content, metadata, or any other relevant properties. Upon successful execution, the endpoint responds with the updated prompt object in JSON format, providing confirmation of the changes made. In case the specified prompt or topic is not found, the endpoint returns an appropriate error response (404 for prompt not found, 500 for other errors), ensuring transparent communication and accurate handling of requests.",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts/:promptId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "promptId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a Prompt"
+        },
+        {
+          "info": {
+            "name": "Remove a specific prompt associated with a particular topic. To utilize this endpoint, users send a DELETE request with the relevant topicId and promptId parameters. Upon successful execution, the specified prompt is permanently deleted from the system. The API responds with a confirmation message indicating the successful deletion of the prompt. In the event that the requested prompt or topic is not found, appropriate error responses are returned (404 for prompt not found, 500 for other errors). This endpoint provides users with the capability to manage prompts effectively within their topics, ensuring streamlined content management within the Proompty platform.",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts/:promptId",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "promptId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Deletes a Prompt"
+        },
+        {
+          "info": {
+            "name": "Retrieve a list of all prompts associated with a specific topic. Users can send a GET request to this endpoint with the relevant topicId parameter to access comprehensive information about each prompt within the specified topic. The API responds with an array of prompt objects in JSON format, containing details such as prompt content, creation dates, and any relevant metadata. This endpoint facilitates efficient management and retrieval of prompts within topics, allowing users to access and utilize prompts effectively in their interactions with the Proompty platform. In case the requested topic is not found, the endpoint returns an appropriate error response (404), ensuring clarity and accuracy in communication between users and the API.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve all prompts for a topic"
+        },
+        {
+          "info": {
+            "name": "Create a new prompts within a specified topic. Users can send a POST request to this endpoint, including the topicId parameter in the URL path and a JSON payload containing the details of the prompt to be created. This payload typically includes the prompt content, along with any relevant metadata. Upon successful execution, the API responds with the newly created prompt object in JSON format, confirming its addition to the specified topic. If there are any issues with the request, such as invalid input data or the specified topic not being found, the endpoint returns an appropriate error response (400 for bad request, 404 for topic not found), ensuring users receive accurate feedback regarding the status of their request. This endpoint offers users a straightforward method for adding prompts to topics, facilitating the efficient management and organization of content within the Proompty platform.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.proompty.com/api/topics/:topicId/prompts",
+            "params": [
+              {
+                "name": "topicId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a prompt for a topic"
+        },
+        {
+          "info": {
+            "name": "Retrieve all topics in the Proompty API. By sending a GET request to this endpoint, users can access a list of all topics available in the system. The API responds with an array of topic objects in JSON format, containing the relevant details. In case no topics are found, an appropriate error response is returned (404), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.proompty.com/api/topics",
+            "params": [
+              {
+                "name": "include",
+                "value": "",
+                "type": "query",
+                "description": "Include additional data in the response. Possible values: chats."
+              }
+            ]
+          },
+          "docs": "Get all topics"
+        },
+        {
+          "info": {
+            "name": "Create a new topic in the Proompty API. By sending a POST request to this endpoint with the new topic object in the request body, users can create a new topic with the specified attributes. The API responds with the newly created topic object in JSON format, containing the relevant details. In case the maximum number of topics allowed on the user's plan is reached, an appropriate error response is returned (400), ensuring users receive accurate feedback regarding the status of their request.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.proompty.com/api/topics",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a topic"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
