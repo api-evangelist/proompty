@@ -109,30 +109,6 @@ apis:
     url: openapi/proompty-topics-api-openapi.yml
   - type: Documentation
     url: https://app.proompty.com/docs/api
-- aid: proompty:proompty-uploads-api
-  name: Proompty Uploads API
-  description: The Uploads API from Proompty — 1 operation(s) for uploads.
-  humanURL: https://app.proompty.com/docs/api
-  baseURL: https://app.proompty.com/api/
-  tags:
-  - Uploads
-  properties:
-  - type: OpenAPI
-    url: openapi/proompty-uploads-api-openapi.yml
-  - type: Documentation
-    url: https://app.proompty.com/docs/api
-- aid: proompty:proompty-user-api
-  name: Proompty User API
-  description: User related endpoints
-  humanURL: https://app.proompty.com/docs/api
-  baseURL: https://app.proompty.com/api/
-  tags:
-  - User
-  properties:
-  - type: OpenAPI
-    url: openapi/proompty-user-api-openapi.yml
-  - type: Documentation
-    url: https://app.proompty.com/docs/api
 common:
 - type: AgenticAccess
   url: agentic-access/proompty-agentic-access.yml
