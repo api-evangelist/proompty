@@ -1,8 +1,8 @@
 aid: proompty
 name: Proompty
-description: Proompty is a web-based platform that offers customizable prompts and exercises to inspire creativity and productivity.
-  Users can access a wide range of prompts, from writing exercises to drawing challenges, designed to spark new ideas and
-  break through mental blocks.
+description: Proompty is a web-based platform that offers customizable prompts and exercises to inspire
+  creativity and productivity. Users can access a wide range of prompts, from writing exercises to drawing
+  challenges, designed to spark new ideas and break through mental blocks.
 type: Index
 deliveryModel:
   model: unknown
@@ -33,7 +33,7 @@ tags:
 - Prompts
 url: https://raw.githubusercontent.com/api-evangelist/proompty/refs/heads/main/apis.yml
 created: '2024-06-06'
-modified: '2026-05-19'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: proompty:proompty-chat-api
@@ -121,6 +121,8 @@ apis:
   - type: Documentation
     url: https://app.proompty.com/docs/api
 common:
+- type: Website
+  url: https://proompty.com
 - type: AgenticAccess
   url: agentic-access/proompty-agentic-access.yml
 - type: DomainSecurity
