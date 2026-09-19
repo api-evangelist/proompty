@@ -114,6 +114,8 @@ apis:
   humanURL: https://app.proompty.com/docs/api
   baseURL: https://app.proompty.com/api/
   tags:
+  - Topic
+  tags_raw:
   - Topics
   properties:
   - type: OpenAPI
