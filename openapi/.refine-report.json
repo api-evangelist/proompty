@@ -1,15 +1,7 @@
 {
   "provider": "proompty",
   "sources": [
-    "proompty-chat-api-openapi.yml",
-    "proompty-documents-api-openapi.yml",
-    "proompty-me-api-openapi.yml",
-    "proompty-prompt-api-openapi.yml",
-    "proompty-prompts-api-openapi.yml",
-    "proompty-topic-api-openapi.yml",
-    "proompty-topics-api-openapi.yml",
-    "proompty-uploads-api-openapi.yml",
-    "proompty-user-api-openapi.yml"
+    "_original/proompty-openapi-original.yml"
   ],
   "outputs": [
     "proompty-chat-api-openapi.yml",
@@ -18,28 +10,30 @@
     "proompty-prompt-api-openapi.yml",
     "proompty-prompts-api-openapi.yml",
     "proompty-topic-api-openapi.yml",
-    "proompty-topics-api-openapi.yml",
-    "proompty-uploads-api-openapi.yml",
-    "proompty-user-api-openapi.yml"
+    "proompty-topics-api-openapi.yml"
   ],
   "archived": [],
   "errors": [
-    "proompty-documents-api-openapi.yml: dangling $ref: #/components/schemas/Document",
-    "proompty-me-api-openapi.yml: dangling $ref: #/components/schemas/Claims",
-    "proompty-me-api-openapi.yml: dangling $ref: #/components/schemas/User",
-    "proompty-prompt-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
-    "proompty-prompts-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
-    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Document",
-    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
-    "proompty-topic-api-openapi.yml: dangling $ref: #/components/schemas/Topic",
-    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Document",
-    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Prompt",
-    "proompty-topics-api-openapi.yml: dangling $ref: #/components/schemas/Topic",
-    "proompty-uploads-api-openapi.yml: dangling $ref: #/components/schemas/Document",
-    "proompty-user-api-openapi.yml: dangling $ref: #/components/schemas/Claims",
-    "proompty-user-api-openapi.yml: dangling $ref: #/components/schemas/User"
+    "proompty-openapi-original.yml: dangling $ref: #/components/schemas/Claims",
+    "proompty-openapi-original.yml: dangling $ref: #/components/schemas/Document",
+    "proompty-openapi-original.yml: dangling $ref: #/components/schemas/Prompt",
+    "proompty-openapi-original.yml: dangling $ref: #/components/schemas/Topic",
+    "proompty-openapi-original.yml: dangling $ref: #/components/schemas/User"
   ],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "proompty-openapi-original.yml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "proompty-openapi-original.yml: multi-axis tagging (9 tags, 7 first tags, 2.93x duplication over 14 operations) \u2014 split on first tag, 12 operations narrowed",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "proompty-chat-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-prompt-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-prompts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-topic-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "proompty-topics-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

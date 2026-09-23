@@ -1,10 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Proompty Chat Documents API
+  title: Proompty Documents API
   version: 1.1.0
-  description: '
-
-    Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
+  description: 'Proompty is an advanced Retrieval Augmented Generation (RAG) API designed
 
     to empower users in seamlessly integrating their data and harnessing the
 
@@ -30,7 +28,7 @@ paths:
       tags:
       - Documents
       description: Get a document by ID
-      summary: Retrieve details about a specific document within a designated topic in the Proompty API. By sending a GET request to this endpoint with the corresponding topicId and documentId parameters, users can access information such as the document's content, creation date, and any associated metadata. The API responds with the document object in JSON format, containing the relevant details. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.
+      summary: Retrieve details about a specific document within a designated topic in the…
       parameters:
       - in: path
         name: topicId
@@ -51,6 +49,8 @@ paths:
                 $ref: '#/components/schemas/Document'
         '404':
           description: Not found
+      operationId: getTopicsByTopicIdDocumentsByDocumentId
+      x-operation-id-source: derived
     delete:
       tags:
       - Documents
@@ -71,7 +71,9 @@ paths:
           description: ok
         '404':
           description: Not found
-      summary: Delete a specific document within a designated topic in the Proompty API. Users can send a DELETE request to this endpoint with the relevant topicId and documentId parameters to remove the specified document from the topic. The API responds with a success message in JSON format, confirming that the document has been successfully deleted. In case the requested document or topic is not found, appropriate error responses are returned (404 for document not found, 500 for other errors), ensuring users receive accurate feedback regarding the status of their request.
+      summary: Delete a specific document within a designated topic in the Proompty API.
+      operationId: deleteTopicsByTopicIdDocumentsByDocumentId
+      x-operation-id-source: derived
   /topics/{topicId}/documents/upload:
     post:
       parameters:
@@ -83,7 +85,7 @@ paths:
       tags:
       - Documents
       description: Upload a document to a topic
-      summary: Upload a document to a specific topic. Users can send a POST request to this endpoint with the relevant topicId parameter and a document file to upload a new document to the specified topic. The API responds with a JSON object containing the uploaded document details and any relevant metadata. This endpoint enables users to efficiently upload and manage documents within topics, facilitating seamless access and sharing of resources across the Proompty platform. In case the document already exists within the specified topic, the endpoint returns an appropriate error response (409), indicating that the document is already present in the topic.
+      summary: Upload a document to a specific topic.
       requestBody:
         content:
           multipart/form-data:
@@ -109,6 +111,8 @@ paths:
           description: Document already exists
         '500':
           description: Error uploading document
+      operationId: postTopicsByTopicIdDocumentsUpload
+      x-operation-id-source: derived
 externalDocs:
   url: /api.yaml
   description: OpenAPI Specification
