@@ -123,6 +123,12 @@ apis:
   - type: Documentation
     url: https://app.proompty.com/docs/api
 common:
+- type: Plans
+  url: plans/proompty-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/proompty-rate-limits.yml
+- type: FinOps
+  url: finops/proompty-finops.yml
 - type: Website
   url: https://proompty.com
 - type: AgenticAccess
