@@ -1,4 +1,4 @@
-# Proompty (proompty)
+# Proompty
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,47 +66,126 @@
 
 Proompty is a web-based platform that offers customizable prompts and exercises to inspire creativity and productivity. Users can access a wide range of prompts, from writing exercises to drawing challenges, designed to spark new ideas and break through mental blocks.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/proompty/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · Prompts
 
-## Scope
+## Proompty on APIs.io
 
-- **Type:** Index
+Everything profiled for Proompty is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/proompty/](https://apis.io/providers/proompty/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (7)
 
- - Artificial Intelligence, Prompts
+- [Proompty Chat API](https://apis.io/apis/proompty/proompty-chat-api/) — The Chat API from Proompty — 1 operation(s) for chat.
+- [Proompty Documents API](https://apis.io/apis/proompty/proompty-documents-api/) — The Documents API from Proompty — 2 operation(s) for documents.
+- [Proompty Me API](https://apis.io/apis/proompty/proompty-me-api/) — The Me API from Proompty — 1 operation(s) for me.
+- [Proompty Prompt API](https://apis.io/apis/proompty/proompty-prompt-api/) — The Prompt API from Proompty — 2 operation(s) for prompt.
+- [Proompty Prompts API](https://apis.io/apis/proompty/proompty-prompts-api/) — The Prompts API from Proompty — 3 operation(s) for prompts.
+- [Proompty Topic API](https://apis.io/apis/proompty/proompty-topic-api/) — The Topic API from Proompty — 6 operation(s) for topic.
+- [Proompty Topics API](https://apis.io/apis/proompty/proompty-topics-api/) — The Topics API from Proompty — 7 operation(s) for topics.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2024-06-06
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Proompty
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Proompty is an advanced Retrieval Augmented Generation (RAG) API designed to empower users in seamlessly integrating their data and harnessing the power of customized Large Language Model (LLM) prompts for interactive communication. At its core, Proompty operates through a series of interconnected functionalities that enable users to navigate and manipulate their data effectively.
+- [Proompty Agentic Access](https://apis.io/agentic-access/proompty/proompty-agentic-access/)
 
-**Human URL:** [https://app.proompty.com/docs/api](https://app.proompty.com/docs/api)
+#### Collections (9)
 
-**Base URL:** [https://app.proompty.com/api/](https://app.proompty.com/api/)
+Postman and Open Collection request collections.
 
+- [Proompty Chat API](https://apis.io/collections/proompty/open-proompty-chat-api/)
+- [Proompty Chat Documents API](https://apis.io/collections/proompty/open-proompty-documents-api/)
+- [Proompty Chat Me API](https://apis.io/collections/proompty/open-proompty-me-api/)
+- [Proompty Chat Prompt API](https://apis.io/collections/proompty/open-proompty-prompt-api/)
+- [Proompty Chat Prompts API](https://apis.io/collections/proompty/open-proompty-prompts-api/)
+- [Proompty Chat Topic API](https://apis.io/collections/proompty/open-proompty-topic-api/)
+- [Proompty Chat Topics API](https://apis.io/collections/proompty/open-proompty-topics-api/)
+- [Proompty Chat Uploads API](https://apis.io/collections/proompty/open-proompty-uploads-api/)
+- [Proompty Chat User API](https://apis.io/collections/proompty/open-proompty-user-api/)
 
-#### Tags:
+#### Security (1)
 
- - Chat, Documents, Prompts, Topics, Uploads
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Proompty Domain Security](https://apis.io/security/proompty/proompty-domain-security/)
 
-- [Documentation](https://app.proompty.com/docs/api)
-- [OpenAPI](openapi/proompty-openapi-original.yml)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
 
-- [Getting Started](https://app.proompty.com/docs/api)
+- [Proompty Plans Pricing](https://apis.io/plans/proompty/proompty-plans-pricing/)
 
-## Maintainers
+#### Rate limits (1)
 
-**FN:** Kin Lane
+Published request limits.
 
-**Email:** kin@apievangelist.com
+- [Proompty Rate Limits](https://apis.io/rate-limits/proompty/proompty-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Proompty Finops](https://apis.io/finops/proompty/proompty-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://proompty.com)
+- [Getting started](https://app.proompty.com/docs/api)
+
+## API Evangelist rating
+
+**Kin Score 22.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 48.2 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/proompty/](https://apis.io/providers/proompty/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Proompty: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/proompty/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
